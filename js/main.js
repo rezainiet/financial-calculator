@@ -1,24 +1,23 @@
-
-
-document.getElementById('calculate-button').addEventListener('click', function () {
-
-    // Food Input Value
-    const foodInput = document.getElementById('foodInput');
+function getSignleExpenseAmount(inputId) {
+    const foodInput = document.getElementById(inputId);
     const foodAmountText = foodInput.value;
     const foodAmount = parseFloat(foodAmountText);
+    foodInput.value = '';
+    return foodAmount;
+}
+
+document.getElementById('calculate-button').addEventListener('click', function (inputId) {
+
+    // Food Input Value
+    foodAmount = getSignleExpenseAmount('foodInput')
     // console.log(foodAmount);
 
     // Rent Input Value
-    const rentInput = document.getElementById('rentInput');
-    const rentAmountText = rentInput.value;
-    const rentAmount = parseFloat(rentAmountText);
+    rentAmount = getSignleExpenseAmount('rentInput')
     // console.log(rentAmount);
 
-
     // Clothes Input Value
-    const clothesInput = document.getElementById('clothesInput');
-    const clothesAmountText = clothesInput.value;
-    const clothesAmount = parseFloat(clothesAmountText);
+    clothesAmount = getSignleExpenseAmount('clothesInput')
     // console.log(clothesAmount);
 
 
