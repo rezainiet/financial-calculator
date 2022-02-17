@@ -1,0 +1,13 @@
+.amount-field {
+  background: #ffe6e6;
+  color: #0af185;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+.custom {
+  background-size: cover;
+}
+#span-color {
+  color: #ff0000;
+  text-decoration: underline;
+}
